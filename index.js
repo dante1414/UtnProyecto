@@ -82,13 +82,13 @@ app.post('/formulario', (req, res)=>{
             correo: correo,
             texto: texto
         };
-        let sql = 'INSERT INTO pedidos SET ?';
+        /*let sql = 'INSERT INTO pedidos SET ?';
         conexion.query(sql, datos, (err, result)=>{
-            if(err) throw err;
+            if(err) throw err;*/
             res.render('formulario', {
                 style: 'base.css'
             })
-        })
+       //})
     }
     
 })
@@ -146,7 +146,4 @@ app.post('/contacto', (req, res)=>{
 app.listen(puerto, () =>{
     //console.log(`Corriendo en puerto ${puerto}`)
 })
-
-
-
 
