@@ -1,0 +1,39 @@
+<div class="container2">
+<div class="row">
+  <div class="col-7">
+    <h2>
+      Solicita tu presupuesto para nuestros servicios
+    </h2>
+    <p> 
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, minima. Voluptate aperiam obcaecati in voluptatem, corporis facilis a tempora quis cumque. Sit fuga suscipit commodi facere corrupti libero quasi id.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum distinctio consectetur numquam a, ullam quia officiis nesciunt blanditiis veritatis. Eveniet, sint neque vel beatae rerum eos nesciunt molestias a accusamus!
+
+    </p>
+  </div>
+  <div class="col-5">
+    <img src="https://estaticos.qdq.com/swdata/photos/283/283568098/b7ac035be7db4384839a5228575419b5.jpg" alt="" class="img-fluid rounded">
+  </div>
+</div>
+
+<form action="./formulario" method="post">
+<div class="row justify-content-center mt-5 pb-5">
+  <div class="col-12 col-md-7">
+    <h2 class="text-center fst-italic">Tipo de Trabajo a Solicitar:</h2>
+    <label class="form-label fw-bold">Ingrese su Nombre y Apellido</label>
+    <input type="text" id="nombre" name="nombre" class="form-control mb-3">
+    <label class="form-label fw-bold">Ingrese su Correo Electronico</label>
+    <input type="email" id="correo" name="correo" class="form-control mb-3">
+    <label class="form-label fw-bold">Descripción del trabajo a solicitar</label>
+    <textarea id="texto" name="texto" rows="5" class="form-control mb-3"></textarea>
+    <div>
+      <input type="submit" class="button btn btn-success w-20 p-2" value="Enviar Datos">
+    </div>
+  </div>
+</div>
+<div class="text-center">
+  <h2 class="text-danger">
+    {{mensaje}}
+  </h2>
+</div>
+</form>
+</div>
