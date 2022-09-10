@@ -6,7 +6,7 @@ const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const puerto = process.env.puerto || 5000;
+const PORT = process.env.PORT || 3001;
 
 /*const conexion = mysql.createConnection({
     host: process.env.host,
@@ -62,7 +62,7 @@ app.get('/sector', (req, res)=>{
 })
 
 app.post('/formulario', (req, res)=>{
-    let nombre = req.body.nombre;
+    /*let nombre = req.body.nombre;
     let correo = req.body.correo;
     let texto = req.body.texto;
     if (nombre == "" || correo == "" || texto == "") {
@@ -79,12 +79,12 @@ app.post('/formulario', (req, res)=>{
         };
         let sql = 'INSERT INTO pedidos SET ?';
         conexion.query(sql, datos, (err, result)=>{
-            if(err) throw err;
+            if(err) throw err;*/
             res.render('formulario', {
                 style: 'base.css'
             })
-       })
-    }
+       //})
+    //}
     
 })
 
@@ -138,7 +138,7 @@ app.post('/contacto', (req, res)=>{
     })
 
 
-app.listen(puerto, () =>{
-    console.log(`Corriendo en puerto ${puerto}`)
+app.listen(PORT, () =>{
+    //console.log(`Corriendo en puerto ${PORT}`)
 })
 
