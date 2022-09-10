@@ -6,10 +6,6 @@ const path = require('path');
 const hbs = require('hbs');
 const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
-const { get } = require('http');
-const baseModule = require('hbs');
-const { ifError } = require('assert');
-const async = require('hbs/lib/async');
 
 
 
@@ -82,13 +78,13 @@ app.post('/formulario', (req, res)=>{
             correo: correo,
             texto: texto
         };
-        /*let sql = 'INSERT INTO pedidos SET ?';
+        let sql = 'INSERT INTO pedidos SET ?';
         conexion.query(sql, datos, (err, result)=>{
-            if(err) throw err;*/
+            if(err) throw err;
             res.render('formulario', {
                 style: 'base.css'
             })
-       //})
+       })
     }
     
 })
