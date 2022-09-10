@@ -1,13 +1,12 @@
 const express = require ('express');
-const app = express();
-const puerto = process.env.puerto || 5000;
 require('dotenv').config();
 const path = require('path');
 const hbs = require('hbs');
 const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
 
-
+const app = express();
+const puerto = process.env.puerto || 5000;
 
 /*const conexion = mysql.createConnection({
     host: process.env.host,
@@ -140,6 +139,6 @@ app.post('/contacto', (req, res)=>{
 
 
 app.listen(puerto, () =>{
-    //console.log(`Corriendo en puerto ${puerto}`)
+    console.log(`Corriendo en puerto ${puerto}`)
 })
 
